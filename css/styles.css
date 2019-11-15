@@ -1,0 +1,242 @@
+body {
+	margin: 0;
+	font: 16px/1.6em sans-serif;
+	color: #333;
+}
+
+@media (min-width: 1600px) {
+	body {
+		font: 17px/1.6em sans-serif;
+	}
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.img-r {
+	max-width: 100%;
+	height: auto;
+}
+
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+.container {
+	padding: 0 15px;
+}
+
+header.main {
+	padding: 15px 0;
+	position: fixed;
+	background: #fff;
+	width: 100%;
+	z-index: 100;
+}
+
+body.open header.main {
+	background: transparent;
+}
+
+header.main .container {
+	display: flex;
+}
+
+.logo {
+	text-decoration: none;
+	color: #333;
+	font-size: 2em;
+	font-weight: bold;
+	font-style: italic;
+	transition: color 0.25s ease-in-out;
+}
+
+body.open .logo {
+	color: #fff;
+}
+
+.burger {
+	height: 30px;
+	padding: 0px;
+	margin-left: auto;
+	cursor: pointer;
+	position: relative;
+}
+
+.burger__1, 
+.burger__2,
+.burger__3 {
+    height: 4px;
+    width: 38px;
+    background: #000;
+    content: "";
+    display: block;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+
+.burger__1 { top: 0; }
+
+.burger__2 { top: 6px; }
+
+.burger__3 { top: 12px; }
+
+.page {
+	transition: transform .55s cubic-bezier(.23,1,.32,1);
+}
+
+.menu-container {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.menu-container .wrapper {
+	transition: transform .5s cubic-bezier(.23,1,.32,1);
+	position: fixed;
+    background: rgb(0,0,0,0.95);
+    color: #fff;
+    top: 0;
+    width: 100%;
+    right: 0;
+    height: 100vh;
+    transform: translateY(100%);
+}
+
+.menu-container nav {
+	text-align: center;
+	margin-top: 100px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-10px);
+	}
+}
+
+.menu-container a {
+	display: block;
+	color: #fff;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-weight: bold;
+	opacity: 0;
+}
+
+body.open .menu-container a {
+	animation: fadeIn 1s ease-in-out forwards;
+}
+
+body.open .menu-container a:nth-child(1) {
+	animation-delay: 0.1s;
+}
+
+body.open .menu-container a:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+body.open .menu-container a:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+body.open .menu-container a:nth-child(4) {
+	animation-delay: 0.4s;
+}
+
+body.open .menu-container a:nth-child(5) {
+	animation-delay: 0.5s;
+}
+
+body.open .menu-container a:nth-child(6) {
+	animation-delay: 0.6s;
+}
+
+body.open .menu-container a:nth-child(7) {
+	animation-delay: 0.6s;
+}
+
+body.open .menu-container a:nth-child(8) {
+	animation-delay: 0.6s;
+}
+
+body.open .menu-container {
+    visibility: visible;
+}
+
+body.open .menu-container .bg {
+    opacity: 0;
+}
+
+body.open .menu-container .wrapper {
+	transform: translateY(0);
+}
+
+body.open .page {
+	/*
+	transform: translateX(-80%);
+	*/
+}
+
+body.open .burger__1 {
+	transform: translateY(10px) rotate(45deg);
+	background: #fff;
+}
+
+body.open .burger__2 {
+    opacity: 0;
+    background: #fff;
+}
+
+body.open .burger__3 {
+    transform: translateY(-10px) rotate(-45deg);
+	background: #fff;
+}
+
+.emotion {
+	padding-top: 60px;
+}
+
+.emotion img {
+	display: block;
+}
+
+.emotion .text {
+	background: #f7d900;
+	padding: 15px;
+	text-transform: uppercase;
+}
+
+.emotion .text h2 {
+	margin: 0 0 10px;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #111;
+}
+
+.emotion .text p {
+	margin: 0 0 10px;
+}
+
+.emotion .button {
+	background: #111;
+	color: #fff;
+	padding: 5px 20px;
+	display: inline-block;
+	text-decoration: none;
+}
