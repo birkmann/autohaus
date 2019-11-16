@@ -488,9 +488,15 @@ body.open .burger__3 {
     padding: 25px 0;
 }
 
+.service .item {
+	margin-bottom: 20px;
+}
+
 @media (min-width: 600px) {
 	.service .row {
 		display: flex;
+		flex-direction: row;
+    	flex-wrap: wrap;
 		margin-left: -10px;
 		margin-right: -10px;
 	}
