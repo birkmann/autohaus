@@ -431,7 +431,7 @@ body.open .burger__3 {
 
 .intro form input,
 .intro form button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     height: 45px;
 }
 
@@ -483,7 +483,7 @@ body.open .burger__3 {
 }
 
 .service {
-	background: #eee;
+	background: #f3f3f3;
     color: #666;
     padding: 25px 0;
 }
@@ -601,6 +601,39 @@ body.open .burger__3 {
 	border: 1px solid #000;
 }
 
+main.content {
+	position: relative;
+}
+
+main.content::before {
+    border-color: #f7d900 transparent transparent;
+    border-style: solid;
+    border-width: 68.75rem 37.5rem 0 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: scale(1.002);
+    transform: scale(1.002);
+    z-index: 0;
+}
+
+.new-cars {
+	position: relative;
+	padding: 25px 0;
+}
+
+.new-cars .container {
+	position: relative;
+	z-index: 1;
+}
+
+.used-cars {
+	padding: 25px 0;
+	position: relative;
+	z-index: 1;
+}
+
 @media (min-width: 600px) {
 	.cars .row {
 		display: flex;
@@ -628,36 +661,81 @@ body.open .burger__3 {
 .cars .car img {
 	width: 100%;
 	height: auto;
-}
-
-.cars .car a.button {
 	display: block;
-	background: #ccc;
-	text-align: center;
-	color: #333;
-	margin-bottom: 10px;
-	padding: 10px;
-	text-decoration: none;
 }
 
-.cars .car a.button.color {
-	background: #f7d900;
+.cars .car .text {
+    background: #f9f9f9;
+    font-size: 0.9em;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 435px
+}
+
+.used-cars .cars .car .text {
+    min-height: 315px
+}
+
+.cars .car h4 {
+	margin: 10px 0;
+	font-weight: normal;
+}
+
+.cars .car .price,
+.cars .car .headline {
+	font-weight: bold;
 }
 
 .cars .car .headline {
 	text-transform: uppercase;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.cars .car .price {
 	font-size: 1.2em;
 }
 
-.cars .car .headline b {
-	text-transform: none;
-	font-size: 0.9em;
+.cars .car a.button {
+	display: block;
+	background: #111;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+	width: 100%;
+	transition: all 0.15s ease-in-out;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
-.cars .car .data p {
-	font-size: 0.9em;
-	line-height: 1.4em;
-	margin: 5px 0 15px;
+.cars .car a.button:hover {
+	background: #f7d900;
+	color: #000;
+}
+
+.cars .car .data ul {
+	margin: 0;
+	padding: 0 0 20px 20px;
+}
+
+.cars .car .data ul li {
+	list-style: none;
+	position: relative;
+}
+
+.cars .car .data ul li:before {
+	background-color: #f7d900;
+    content: '';
+    height: .375rem;
+    left: -1rem;
+    margin: .6875rem 0 0;
+    position: absolute;
+    width: .375rem;
 }
 
 footer.main h4 {
@@ -667,7 +745,7 @@ footer.main h4 {
 }
 
 footer.main .before {
-	background: #eee;
+	background: #f3f3f3;
 	color: #666;
 	padding: 25px 0;
 }
