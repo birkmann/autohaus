@@ -488,14 +488,20 @@ body.open .burger__3 {
     padding: 25px 0;
 }
 
-
-@media (min-width: 960px) {
+@media (min-width: 600px) {
 	.service .row {
 		display: flex;
 		margin-left: -10px;
 		margin-right: -10px;
 	}
+	.service .item {
+		width: 50%;
+		padding: 0 10px;
+	}
+}
 
+
+@media (min-width: 960px) {
 	.service .item {
 		width: 25%;
 		padding: 0 10px;
@@ -505,6 +511,12 @@ body.open .burger__3 {
 .service .item img {
 	width: 100%;
 	height: auto;
+	display: block;
+}
+
+.service .item .text {
+	padding: 15px;
+	background: #fff;
 }
 
 .service .item h3 {
@@ -514,6 +526,8 @@ body.open .burger__3 {
 
 .service .item p {
 	margin: 5px 0 10px;
+	font-size: 0.9em;
+	color: #333;
 }
 
 .service h2 {
