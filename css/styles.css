@@ -289,15 +289,26 @@ body.open .burger__3 {
 	text-decoration: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 600px) {
 	.cars {
 		display: flex;
+		flex-direction: row;
+    	flex-wrap: wrap;
 	}
 	.cars .car {
-		padding-right: 20px;
+		width: 50%;
+		padding: 0 10px;
 	}
+	/*
 	.cars .car:last-child {
 		padding-right: 0px;
+	}
+	*/
+}
+
+@media (min-width: 1000px) {
+	.cars .car {
+		width: 25%;
 	}
 }
 
