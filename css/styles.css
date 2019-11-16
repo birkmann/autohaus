@@ -38,6 +38,12 @@ body {
 	margin: 0 auto;
 }
 
+@media (min-width: 1200px) {
+	.container {
+		padding: 0 50px;
+	}
+}
+
 header.main {
 	min-height: 65px;
 	position: fixed;
@@ -476,6 +482,44 @@ body.open .burger__3 {
 	background: #111;
 }
 
+.service {
+	background: #eee;
+    color: #666;
+    padding: 25px 0;
+}
+
+
+@media (min-width: 960px) {
+	.service .row {
+		display: flex;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.service .item {
+		width: 25%;
+		padding: 0 10px;
+	}
+}
+
+.service .item img {
+	width: 100%;
+	height: auto;
+}
+
+.service .item h3 {
+	margin: 10px 0 15px;
+	color: #333;
+}
+
+.service .item p {
+	margin: 5px 0 10px;
+}
+
+.service h2 {
+	color: #333;
+}
+
 .emotion .slides {
 	margin-bottom: -8px;
 }
@@ -538,10 +582,12 @@ body.open .burger__3 {
 }
 
 @media (min-width: 600px) {
-	.cars {
+	.cars .row {
 		display: flex;
 		flex-direction: row;
     	flex-wrap: wrap;
+    	margin-left: -10px;
+    	margin-right: -10px;
 	}
 	.cars .car {
 		width: 50%;
@@ -592,10 +638,6 @@ body.open .burger__3 {
 	font-size: 0.9em;
 	line-height: 1.4em;
 	margin: 5px 0 15px;
-}
-
-footer.main {
-	margin-top: 75px;
 }
 
 footer.main h4 {
