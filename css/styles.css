@@ -603,6 +603,7 @@ body.open .burger__3 {
 
 main.content {
 	position: relative;
+	overflow: hidden;
 }
 
 main.content::before {
