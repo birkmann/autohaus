@@ -99,20 +99,30 @@ header.main .top ul li i {
 }
 
 @media (min-width: 960px) {
-	.emotion {
-		padding-top: 110px !important;
-	}
 	header.main .top {
 		display: block;
 		border-bottom: 1px solid #ddd;
 	}
-	header.main .bottom {
-		
+	header.main {
+		position: relative;
+	}
+	.emotion {
+		padding-top: 0px !important;
 	}
 }
+
 @media (min-width: 1200px) {
 	header.main .top ul li i {
 	    display: inline-block;
+	}
+}
+
+@media (min-width: 1400px) {
+	header.main {
+		position: fixed;
+	}
+	.emotion {
+		padding-top: 110px !important;
 	}
 }
 
