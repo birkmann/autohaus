@@ -30,6 +30,8 @@ body {
 
 .container {
 	padding: 0 15px;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 header.main {
@@ -43,30 +45,122 @@ header.main {
 	transition: background 0.25s ease-in-out;
 }
 
-body.open header.main {
-	/*
-	background: rgba(0,0,0,0);
-	*/
-}
-
 header.main .container {
 	display: flex;
+}
+
+/*
+header.main .container,
+header.top .container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+*/
+
+header.main .top {
+	display: none;
+	padding: 10px 0;
+}
+
+header.main .top .container {
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+header.main .top ul {
+	padding: 0;
+	margin: 0;
+}
+
+header.main .top ul li {
+	list-style: none;
+	display: inline-flex;
+	padding: 0 15px;
+}
+
+header.main .top ul li a {
+	color: #333;
+	text-decoration: none;
+	transition: color: 0.25s ease-in-out;
+}
+
+header.main .top ul li a:hover {
+	color: #000;
+}
+
+header.main .top ul li i {
+	color: #ffcc01;
+    margin: 4px 10px 0 0;
+    display: none;
+}
+
+
+@media (min-width: 960px) {
+	.emotion {
+		padding-top: 110px !important;
+	}
+	header.main .top {
+		display: block;
+		border-bottom: 1px solid #ddd;
+	}
+	header.main .bottom {
+		
+	}
+}
+@media (min-width: 1200px) {
+	header.main .top ul li i {
+	    display: inline-block;
+	}
 }
 
 .logo {
 	margin-top: 18px;
 	text-decoration: none;
 	color: #333;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	font-style: italic;
 	transition: color 0.25s ease-in-out;
 }
 
-body.open .logo {
-	/*
-	color: #fff;
-	*/
+.logo span.hide-mobile {
+	display: none;
+}
+
+.logo span {
+	display: inline-block;
+}
+
+.logo img {
+	max-width: 40px;
+}
+
+@media (min-width: 320px) {
+	.logo span.icon.hide-mobile {
+		display: inline-block;
+	}
+	.logo span.text {
+		position: relative;
+    	top: -10px;
+	}
+}
+
+@media (min-width: 480px) {
+	.logo span.text span.hide-mobile {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1200px) {
+	.logo {
+		font-size: 2em;
+	}
+	.logo span.text {
+    	top: -7px;
+	}
+	.logo span {
+		display: inline-block;
+	}
 }
 
 .burger {
@@ -96,6 +190,27 @@ header.main nav {
 		display: inline-block;
 		line-height: 65px;
 		padding: 0 15px;
+		font-weight: bold;
+		transition: color 0.15s ease-in-out;
+		position: relative;
+		text-transform: uppercase;
+	}
+	header.main nav a:hover {
+		color: #888;
+	}
+	header.main nav a:after { 
+		content: "";
+		height: 5px; 
+		left: 0; 
+		bottom: 0px; 
+		width: 0px;  
+		position: absolute; 
+		transition: all 0.3s ease 0s; 
+		z-index: -1;
+		background: #ffcc01;
+	}
+	header.main nav a:hover:after {
+		width: 100%;
 	}
 }
 
@@ -147,8 +262,8 @@ header.main nav {
 }
 
 .menu-container nav {
+	margin-top: 75px;
 	text-align: center;
-	margin-top: 100px;
 }
 
 @keyframes fadeIn {
@@ -165,10 +280,9 @@ header.main nav {
 .menu-container a {
 	display: block;
 	color: #fff;
-	padding: 15px;
+	padding: 20px 15px;
 	text-decoration: none;
-	font-size: 1.4em;
-	font-weight: bold;
+	font-size: 1.2em;
 	opacity: 0;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -248,14 +362,6 @@ body.open .burger__3 {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/*
-body.open .burger__1,
-body.open .burger__2,
-body.open .burger__3 {
-	background: #fff;
-}
-*/
-
 .emotion {
 	padding-top: 60px;
 }
@@ -289,6 +395,55 @@ body.open .burger__3 {
 	text-decoration: none;
 }
 
+.emotion .slides {
+	margin-bottom: -8px;
+}
+
+.emotion .slick-prev,
+.emotion .slick-next {
+	display: none !important;
+}
+
+.emotion .slick-dots {
+	display: none !important;
+	position: absolute;
+    bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+@media (min-width: 960px) {
+	.emotion .slick-dots {
+		display: flex !important;
+	}
+}
+
+.emotion .slick-dots li {
+	list-style: none;
+}
+
+.emotion .slick-dots li button {
+    outline: 0 none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid #666;
+    margin: 5px;
+    font-size: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.emotion .slick-dots li button:hover,
+.emotion .slick-dots li.slick-active button {
+	background: #000;
+	border: 1px solid #000;
+}
+
 @media (min-width: 600px) {
 	.cars {
 		display: flex;
@@ -299,14 +454,9 @@ body.open .burger__3 {
 		width: 50%;
 		padding: 0 10px;
 	}
-	/*
-	.cars .car:last-child {
-		padding-right: 0px;
-	}
-	*/
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1160px) {
 	.cars .car {
 		width: 25%;
 	}

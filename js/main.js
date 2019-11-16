@@ -6,6 +6,13 @@ $(document).ready(function() {
 	$(".menu-container .bg").click(function(){
 		$("body").toggleClass("open");
 	});
+	$(".emotion .slides").slick({
+		dots: true,
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		cssEase: 'linear'
+	});
 });
 
 $(window).scroll(function(){
