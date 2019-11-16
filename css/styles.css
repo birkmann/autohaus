@@ -33,15 +33,20 @@ body {
 }
 
 header.main {
-	padding: 15px 0;
+	min-height: 65px;
 	position: fixed;
 	background: #fff;
+	background: rgba(255,255,255,1);
 	width: 100%;
 	z-index: 100;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	transition: background 0.25s ease-in-out;
 }
 
 body.open header.main {
-	background: transparent;
+	/*
+	background: rgba(0,0,0,0);
+	*/
 }
 
 header.main .container {
@@ -49,6 +54,7 @@ header.main .container {
 }
 
 .logo {
+	margin-top: 18px;
 	text-decoration: none;
 	color: #333;
 	font-size: 2em;
@@ -58,15 +64,39 @@ header.main .container {
 }
 
 body.open .logo {
+	/*
 	color: #fff;
+	*/
 }
 
 .burger {
+	margin-top: 18px;
 	height: 30px;
 	padding: 0px;
 	margin-left: auto;
 	cursor: pointer;
 	position: relative;
+}
+
+header.main nav {
+	display: none;
+}
+
+@media (min-width: 960px) {
+	.burger {
+		display: none;
+	}
+	header.main nav {
+		display: block;
+		margin-left: auto;
+	}
+	header.main nav a {
+		text-decoration: none;
+		color: #333;
+		display: inline-block;
+		line-height: 65px;
+		padding: 0 15px;
+	}
 }
 
 .burger__1, 
@@ -82,10 +112,13 @@ body.open .logo {
 }
 
 .burger__1 { top: 0; }
-
 .burger__2 { top: 6px; }
-
 .burger__3 { top: 12px; }
+
+.burger__2 {
+    width: 80%;
+    margin-left: 20%;
+}
 
 .page {
 	transition: transform .55s cubic-bezier(.23,1,.32,1);
@@ -137,6 +170,16 @@ body.open .logo {
 	font-size: 1.4em;
 	font-weight: bold;
 	opacity: 0;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-container a:last-child {
+	border-bottom: 0;
+}
+
+.menu-container a:hover {
+	background: #fff;
+	color: #000;
 }
 
 body.open .menu-container a {
@@ -195,18 +238,23 @@ body.open .page {
 
 body.open .burger__1 {
 	transform: translateY(10px) rotate(45deg);
-	background: #fff;
 }
 
 body.open .burger__2 {
     opacity: 0;
-    background: #fff;
 }
 
 body.open .burger__3 {
     transform: translateY(-10px) rotate(-45deg);
+}
+
+/*
+body.open .burger__1,
+body.open .burger__2,
+body.open .burger__3 {
 	background: #fff;
 }
+*/
 
 .emotion {
 	padding-top: 60px;
@@ -239,4 +287,55 @@ body.open .burger__3 {
 	padding: 5px 20px;
 	display: inline-block;
 	text-decoration: none;
+}
+
+@media (min-width: 960px) {
+	.cars {
+		display: flex;
+	}
+	.cars .car {
+		padding-right: 20px;
+	}
+	.cars .car:last-child {
+		padding-right: 0px;
+	}
+}
+
+.cars .car {
+	margin-bottom: 50px;
+}
+
+.cars .car img {
+	width: 100%;
+	height: auto;
+}
+
+.cars .car a.button {
+	display: block;
+	background: #ccc;
+	text-align: center;
+	color: #333;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.cars .car a.button.color {
+	background: #ffcc01;
+}
+
+.cars .car .headline {
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+.cars .car .headline b {
+	text-transform: none;
+	font-size: 0.9em;
+}
+
+.cars .car .data p {
+	font-size: 0.9em;
+	line-height: 1.4em;
+	margin: 5px 0 15px;
 }
