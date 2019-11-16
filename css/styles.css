@@ -813,7 +813,8 @@ footer.main .top .table .row .col:last-child{
 }
 
 footer.main .bottom {
-	background: #000;
+	border-top: 1px solid #333;
+	background: #111;
 	font-size: 0.9em;
 }
 

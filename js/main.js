@@ -6,6 +6,9 @@ $(document).ready(function() {
 	$(".menu-container .bg").click(function(){
 		$("body").toggleClass("open");
 	});
+	$(".menu-container a").click(function(){
+		$("body").toggleClass("open");
+	});
 	$(".emotion .slides").slick({
 		dots: true,
 		infinite: true,
