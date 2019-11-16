@@ -504,6 +504,12 @@ body.open .burger__3 {
 
 @media (min-width: 1200px) {
 	.emotion .slick-dots {
+		 bottom: 13px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.emotion .slick-dots {
 		 bottom: 20px;
 	}
 }
