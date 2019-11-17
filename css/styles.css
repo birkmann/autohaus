@@ -598,6 +598,10 @@ body.open .burger__3 {
 	text-align: center;
 }
 
+.welcome h2 {
+	line-height: 1.4em;
+}
+
 .welcome p {
 	max-width: 800px;
 	margin: 25px auto;
@@ -625,7 +629,7 @@ body.open .burger__3 {
 }
 
 .service .item {
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
 
 .service .item .inside {
@@ -653,6 +657,7 @@ body.open .burger__3 {
 	.service .item {
 		width: 25%;
 		padding: 0 10px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -680,6 +685,18 @@ body.open .burger__3 {
 
 .service h2 {
 	color: #333;
+}
+
+@media (max-width: 600px) {
+	.service h2 {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.service i {
+		display: block;
+		font-size: 2em;
+		margin-bottom: 10px;
+	}
 }
 
 section.cars-wrapper {
@@ -737,7 +754,7 @@ section.cars-wrapper::before {
 }
 
 .cars .car {
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 }
 
 .cars .car .inside {
@@ -857,7 +874,7 @@ section.cars-wrapper::before {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 	padding: 20px;
 	border-radius: 3px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .news .item h3 {
@@ -879,6 +896,7 @@ section.cars-wrapper::before {
 	.news-wrapper .item {
 		margin-right: 15px;
 		margin-left: 15px;
+		margin-bottom: 20px;
 	}
 }
 
