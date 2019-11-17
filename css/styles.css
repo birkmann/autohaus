@@ -38,6 +38,12 @@ body {
 	margin: 0 auto;
 }
 
+@media (min-width: 400px) {
+	.container {
+		padding: 0 25px;
+	}
+}
+
 @media (min-width: 1200px) {
 	.container {
 		padding: 0 50px;
@@ -391,11 +397,11 @@ body.open .burger__3 {
 
 .intro {
 	background: #f7d900;
-	padding: 15px;
+	padding: 15px 0;
 }
 
 .intro h2 {
-    margin: 10px 0;
+    margin: 0 0 10px;
     font-size: 1.2em;
     font-weight: bold;
     color: #111;
@@ -489,7 +495,7 @@ body.open .burger__3 {
 }
 
 .service .item {
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 @media (min-width: 600px) {
@@ -657,7 +663,13 @@ main.content::before {
 }
 
 .cars .car {
-	margin-bottom: 50px;
+	margin-bottom: 25px;
+}
+
+.cars .car .inside {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	border-radius: 3px;
+	overflow: hidden;
 }
 
 .cars .car img {
