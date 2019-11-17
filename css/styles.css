@@ -613,6 +613,34 @@ body.open .burger__3 {
 	background: #111;
 }
 
+.mobile-infos {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.mobile-infos a {
+    display: block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 100%;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+.mobile-infos i {
+	margin-right: 5px;
+}
+
+@media (min-width: 960px) {
+	.mobile-infos {
+		display: none;
+	}
+}
+
 .service {
 	background: #f3f3f3;
 	color: #666;
