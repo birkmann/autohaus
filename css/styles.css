@@ -672,10 +672,23 @@ main.content::before {
 	overflow: hidden;
 }
 
+.cars .car header {
+	background: #fff;
+}
+
 .cars .car img {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+
+.new-cars img {
+	transform: scale(0.9);
+	transition: all 0.25s ease-in-out;
+}
+
+.new-cars .car:hover img {
+	transform: scale(1);
 }
 
 .cars .car .text {
