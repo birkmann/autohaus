@@ -277,6 +277,7 @@ header.main nav {
 .menu-container .wrapper {
 	transition: transform .5s cubic-bezier(.23,1,.32,1);
 	position: fixed;
+	background: #000;
 	background: rgb(0,0,0,0.95);
 	color: #fff;
 	top: 0;
@@ -543,10 +544,10 @@ body.open .burger__3 {
 	border: 0 none;
 	background: #333;
 	color: #fff;
-	padding: 5px 20px;
 	display: inline-block;
 	text-decoration: none;
 	transition: background 0.15s ease-in-out;
+	outline: 0 none;
 }
 
 .intro form button:hover {
@@ -670,12 +671,12 @@ body.open .burger__3 {
 	color: #333;
 }
 
-main.content {
+section.cars-wrapper {
 	position: relative;
 	overflow: hidden;
 }
 
-main.content::before {
+section.cars-wrapper::before {
 	border-color: #f7d900 transparent transparent;
 	border-style: solid;
 	border-width: 68.75rem 37.5rem 0 0;
@@ -775,7 +776,6 @@ main.content::before {
 
 .cars .car h4 {
 	margin: 10px 0;
-	font-weight: normal;
 }
 
 .cars .car .price,
