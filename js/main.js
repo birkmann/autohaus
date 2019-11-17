@@ -29,6 +29,16 @@ $(window).scroll(function(){
 
 });
 
+if ($(window).width() < 960){
+	var scrollOffset = 60;
+} else if ( $(window).width() > 960 && $(window).width() < 1400 ) {
+	scrollOffset = 0;
+} else if ( $(window).width() > 1400 ){
+	scrollOffset = 100;
+} else {
+	scrollOffset = 100;
+}
+
 
 $('a[href^="#"]').on('click',function(e) {
 	e.preventDefault();
@@ -36,7 +46,7 @@ $('a[href^="#"]').on('click',function(e) {
 	var target = this.hash;
 	if ($(this).data('offset') != undefined) offset = $(this).data('offset');
 	$('html, body').stop().animate({
-		'scrollTop': $(target).offset().top - 100
+		'scrollTop': $(target).offset().top - scrollOffset
 	}, 500, 'swing', function() {
 		// window.location.hash = target;
 	});
