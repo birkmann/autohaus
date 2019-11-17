@@ -120,7 +120,10 @@ header.main .top ul li i {
 
 @media (min-width: 960px) {
 	header.main {
-		position: relative;
+		position: fixed;
+	}
+	.emotion {
+		padding-top: 110px !important;
 	}
 	header.main .top {
 		display: block;
@@ -129,23 +132,11 @@ header.main .top ul li i {
 	header.main .top ul li {
 		padding: 0 15px;
 	}
-	.emotion {
-		padding-top: 0px !important;
-	}
 }
 
 @media (min-width: 1200px) {
 	header.main .top ul li i {
 		display: inline-block;
-	}
-}
-
-@media (min-width: 1400px) {
-	header.main {
-		position: fixed;
-	}
-	.emotion {
-		padding-top: 110px !important;
 	}
 }
 
@@ -793,7 +784,7 @@ section.cars-wrapper::before {
 @media (min-width: 600px) {
 
 	.cars .car .text {
-		min-height: 460px;
+		min-height: 425px;
 	}
 
 	.used-cars .cars .car .text {

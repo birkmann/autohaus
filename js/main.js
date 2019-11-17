@@ -40,12 +40,8 @@ $(window).scroll(function(){
 
 if ($(window).width() < 960){
 	var scrollOffset = 60;
-} else if ( $(window).width() > 960 && $(window).width() < 1400 ) {
-	scrollOffset = 0;
-} else if ( $(window).width() > 1400 ){
-	scrollOffset = 110;
 } else {
-	scrollOffset = 100;
+	scrollOffset = 110;
 }
 
 
