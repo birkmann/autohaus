@@ -491,11 +491,17 @@ body.open .burger__3 {
 .service {
 	background: #f3f3f3;
     color: #666;
-    padding: 25px 0;
+    padding: 50px 0;
 }
 
 .service .item {
 	margin-bottom: 25px;
+}
+
+.service .item .inside {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	border-radius: 3px;
+	overflow: hidden;
 }
 
 @media (min-width: 600px) {
@@ -869,10 +875,11 @@ footer.main .bottom ul li {
 footer.main .bottom ul li a {
 	text-decoration: none;
 	color: #666;
+	transition: all 0.25s ease-in-out;
 }
 
 footer.main .bottom ul li a:hover {
-	color: #fff;
+	color: #ccc;
 }
 
 @media (min-width: 960px) {
