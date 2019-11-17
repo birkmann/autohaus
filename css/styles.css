@@ -80,18 +80,26 @@ header.main .top {
 
 header.main .top .container {
 	flex-direction: column;
-	align-items: flex-end;
+}
+
+header.main .top .logo-top {
+	position: absolute;
+}
+
+header.main .top .logo-top img {
+	max-width: 60px;
+	height: auto;
 }
 
 header.main .top ul {
 	padding: 0;
-	margin: 0;
+	margin: 0 0 0 auto;
 }
 
 header.main .top ul li {
 	list-style: none;
 	display: inline-flex;
-	padding: 0 15px;
+	padding: 0 10px;
 }
 
 header.main .top ul li a {
@@ -111,12 +119,15 @@ header.main .top ul li i {
 }
 
 @media (min-width: 960px) {
+	header.main {
+		position: relative;
+	}
 	header.main .top {
 		display: block;
 		border-bottom: 1px solid #ddd;
 	}
-	header.main {
-		position: relative;
+	header.main .top ul li {
+		padding: 0 15px;
 	}
 	.emotion {
 		padding-top: 0px !important;
