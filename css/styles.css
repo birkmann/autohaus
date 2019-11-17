@@ -622,7 +622,7 @@ main.content::before {
 
 .new-cars {
 	position: relative;
-	padding: 25px 0;
+	padding: 50px 0 0;
 }
 
 .new-cars .container {
@@ -631,7 +631,7 @@ main.content::before {
 }
 
 .used-cars {
-	padding: 25px 0;
+	padding: 0 0 25px;
 	position: relative;
 	z-index: 1;
 }
@@ -672,11 +672,18 @@ main.content::before {
     padding: 10px;
     position: relative;
     padding-bottom: 50px;
-    min-height: 460px
 }
 
-.used-cars .cars .car .text {
-    min-height: 315px
+@media (min-width: 600px) {
+
+	.cars .car .text {
+		min-height: 460px;
+	}
+
+	.used-cars .cars .car .text {
+    	min-height: 315px
+	}
+
 }
 
 .cars .car h4 {
