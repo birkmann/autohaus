@@ -672,7 +672,7 @@ main.content::before {
     padding: 10px;
     position: relative;
     padding-bottom: 50px;
-    min-height: 435px
+    min-height: 460px
 }
 
 .used-cars .cars .car .text {
@@ -726,8 +726,10 @@ main.content::before {
 }
 
 .cars .car .data ul li {
-	list-style: none;
-	position: relative;
+    list-style: none;
+    position: relative;
+    line-height: 1.4em;
+    margin-bottom: 8px;
 }
 
 .cars .car .data ul li:before {
